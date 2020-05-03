@@ -1,25 +1,44 @@
-# Default Template for SDG .NET Course
+Party Thyme
+With the seasons changing to springtime, it is time to start planting our gardens. For this assignment, you will be building an app that allows users to track their gardens. This will us track what plants we have planted, how long ago they were planted and other details.
 
-This is the default template for a simple .NET Core console app. This template has:
+Objectives
+Create a console app that uses an ORM to talk to a database
+Working with EF Core
+Reenforce SQL basics
+Requirements
+Create a .NET console app that stores data in a database.
+Query the database using EF Core.
+Resources
+EF Core Notes
+Explorer Mode
+.NET
+Create a new console application that will store the list of plants the user has planted.
 
-- github integration
+You will be creating a class for your plant.
 
-## To push to github
+a Plant has the following properties
 
-To create and push your current code to github, use the task `create-github`.
+Id - primary key
+Species - The type of plant
+LocatedPlanted - where is the plant plated
+PlantedDate - When was the plant planted
+LastWateredDate - When was the last time a plant was water
+LightNeeded - How much sunlight is needed
+WaterNeeded - how much water is needed
+Your Plants will be stored in a database called PlantDatabase.
 
-How?
+When the console application runs, it should let the user choose one of the following actions:
 
-1. Open your command pallette by using (Mac) `shift + cmd + p` or (Windows) `shift + ctrl + p`
-2. Search and Select `Tasks: Run Task`
-3. Select `create-github` from the dropdown
-
-This will create a new github repo, locally and up on github and also push your current code.
-
-## To turn in your assignment:
-
-after you have created a github repo, completed your project and pushed your code, follow these instructions: https://suncoast.io/handbook/tools/assignment-turn-in/
-
-## PROTIP:
-
-When you are complete with the project and have turned it in to your instructor, update this read me with details about the assignment.
+View All the current plants
+this command will show the all the plants in a the list, ordered by LocationPlanted
+Plant a new plant
+This command will let the user type in the information for a plant and add it to the list
+Remove a plant
+This will delete a plant by Id
+Water
+This will update the plant's LastWateredDate to the Current Time. The user will select the plant by Id
+View all the plants that have not been watered today
+Location summary
+This will all the plants that are in given location
+quit the program
+this will stop the program
